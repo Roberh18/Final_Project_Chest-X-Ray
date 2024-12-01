@@ -584,7 +584,7 @@ class DeeperCNN_8_SEB(nn.Module):
 
 def get_model(model_type):
     if model_type == 'DenseNet121':
-        model = models.densenet121(weights='IMAGENET1K_V1')
+        model = models.densenet121(weights='IMAGENET1K_V2')
         num_features = model.classifier.in_features
         # Freeze early layers
         for param in model.features.parameters():
@@ -597,7 +597,7 @@ def get_model(model_type):
             nn.Linear(512, NUM_CLASSES),
         )
     elif  model_type == 'ResNet50':
-        model = models.resnet50(weights='IMAGENET1K_V1')
+        model = models.resnet50(weights='IMAGENET1K_V2')
         num_features = model.fc.in_features
         # Freeze early layers based on FREEZE_LAYERS
         if FREEZE_LAYERS:
@@ -612,7 +612,7 @@ def get_model(model_type):
             nn.Linear(512, NUM_CLASSES),
         )
     elif model_type == 'ResNet18':
-        model = models.resnet18(weights='IMAGENET1K_V1')
+        model = models.resnet18(weights='IMAGENET1K_V2')
         num_features = model.fc.in_features
         if FREEZE_LAYERS:
             # Freeze earlier layers for feature extraction
@@ -627,7 +627,7 @@ def get_model(model_type):
             nn.Linear(512, NUM_CLASSES),
         )
     elif model_type == 'ResNet18_1':
-        model = models.resnet18(weights='IMAGENET1K_V1')
+        model = models.resnet18(weights='IMAGENET1K_V2')
         num_features = model.fc.in_features
         if FREEZE_LAYERS:
             # Freeze earlier layers for feature extraction
@@ -647,7 +647,7 @@ def get_model(model_type):
             nn.Linear(512, NUM_CLASSES),
         )
     elif model_type == 'ResNet18_2':
-        model = models.resnet18(weights='IMAGENET1K_V1')
+        model = models.resnet18(weights='IMAGENET1K_V2')
         num_features = model.fc.in_features
         if FREEZE_LAYERS:
             # Freeze earlier layers for feature extraction
@@ -671,7 +671,7 @@ def get_model(model_type):
             nn.Linear(512, NUM_CLASSES),
         )
     elif model_type == 'ResNet18_SEB_1':
-        model = models.resnet18(weights='IMAGENET1K_V1')
+        model = models.resnet18(weights='IMAGENET1K_V2')
         model = add_se_to_resnet(model, reduction=16)  # Add SE blocks with a reduction ratio of 16
     
         num_features = model.fc.in_features
@@ -694,7 +694,7 @@ def get_model(model_type):
             nn.Linear(512, NUM_CLASSES),
     )
     elif model_type == 'ResNet18_SEB_2':
-        model = models.resnet18(weights='IMAGENET1K_V1')
+        model = models.resnet18(weights='IMAGENET1K_V2')
         model = add_se_to_resnet(model, reduction=8)  # Add SE blocks with a reduction ratio of 8
     
         num_features = model.fc.in_features
