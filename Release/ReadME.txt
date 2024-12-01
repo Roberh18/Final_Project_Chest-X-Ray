@@ -1,5 +1,5 @@
 
-1. Transfer all the files to Jupyterhub
+1. Using Jupyterhub
 
 2. Install necessary libraries / packages
 
