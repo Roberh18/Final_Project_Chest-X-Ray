@@ -47,38 +47,6 @@ print(f"Using device: {device}")
 # 2.1 Hyperparameters: Constants and Configuration
 # ============================================================
 
-'''
-NUM_CLASSES = 6     
-BATCH_SIZE = 128                  # Adjusted from 64
-LEARNING_RATE = 0.001            # Adjusted from 0.0005
-NUM_EPOCHS = 50
-DROPOUT = 0.1                   # Adjusted from 0.2
-IMAGE_SIZE = 224                 # Adjusted from 224
-FIRST_LAYER_SIZE = 3             # 1 for 'L' grayscale, 3 for 'RGB', defined in ChestXrayDataset class
-CALC_DATASET_MEAN_STD = False    # 'True' if mean and std pixel values have not been pre calulated
-
-# Model and Training Configuration
-MODEL_TYPE = 'ResNet18'   # Custom models: 'DeeperCNN_6' 'DeeperCNN_8' 'DeeperCNN_8_SEB', Pre-trained models: 'ResNet50' 'ResNet18' 'ResNet18_2' 'ResNet18_SEB_3' 'ResNet18_SEB' 'DenseNet121'
-OPTIMIZER_TYPE = 'AdamW'      # 'Adam', 'AdamW', 'SGDm', 'RMSprop', 'Ranger' (Adam + Lookahead)
-USE_SCHEDULER = True
-SCHEDULER_FACTOR = 0.3
-SCHEDULER_PATIENCE = 2
-FREEZE_LAYERS = False  # Optional parameter to pre-trained models, Set to False to fine-tune all layers 
-WEIGHT_DECAY = 5e-5 
-
-Model-ResNet18
-Epochs-100
-ImgSize-224
-BatchSize-96
-Dropout-0.2
-LR-0.001
-ValF1-0.45
-TestAcc-0.645
-TestLoss-0.2030
-Prec-0.74
-Recall-0.69
-F1-0.71
-'''
 #Added normalization of sample weights
 
 VERSION = "1.1.0"
