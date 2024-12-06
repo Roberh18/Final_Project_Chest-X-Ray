@@ -24,13 +24,11 @@ import matplotlib.pyplot as plt
 from matplotlib_venn import venn2
 import seaborn as sns
 
-# Ensure that plots use a non-interactive backend if running in a non-interactive environment
-plt.switch_backend('Agg')
+
 
 # ================================
 # 1. Device Configuration
 # ================================
-
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
