@@ -39,7 +39,7 @@ print(f"Using device: {device}")
 # 2.1 Hyperparameters: Constants and Configuration
 # ============================================================
 
-VERSION = "2.0.1"
+VERSION = "2.1.1"
 NUM_CLASSES = 6
 BATCH_SIZE = 128
 LEARNING_RATE = 0.001
